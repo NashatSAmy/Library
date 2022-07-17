@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&display=swap");
+
+body {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+span:hover {
+  cursor: default;
+}
+
+textarea {
+  border: none;
+  outline: none;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  border: none;
+  outline: none;
+}
+
+header {
+  width: 100%;
+  height: 13%;
+  box-shadow: 0px 0px 5px 0px rgb(126 24 24);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bookShelf {
+  width: 100%;
+  height: 84%;
+  box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+  height: 3%;
+  text-align: center;
+}
+
+.logo {
+  width: 70%;
+}
+
+.controls {
+  width: 30%;
+}
+
+.logo img {
+  width: 40%;
+}
+
+.controls button {
+  font-size: 1.5rem;
+  padding: 10px;
+  background-color: #eab308;
+  border: 2px solid #dc2626;
+  transition: all 200ms;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+.controls button:hover {
+  color: #dc2626;
+  border: 2px solid #eab308;
+  cursor: pointer;
+}
+
+.controls button:active {
+  color: #dc2626;
+  border: 2px solid #dc2626;
+}
+
+.shelves {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, min(30%, 350px));
+  grid-auto-rows: 1fr;
+  overflow: auto;
+  gap: 30px;
+  padding: 25px;
+}
+
+.shelf {
+  position: relative;
+  background-color: #eab308;
+  width: 100%;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 10px 0px #dc2626;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.author,
+.title,
+.pageNo {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.read {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+}
+
+#remove, #removeForm {
+  position: absolute;
+  font-size: 1.8rem;
+  color: #dc2626;
+  text-align: end;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+#remove:hover {
+  cursor: pointer;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #eab308;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #dc2626;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #dc2626;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.popup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: baseline;
+  background-color: #fbe9b1;
+  width: 22%;
+  height: 57%;
+  box-sizing: border-box;
+  padding: 35px;
+}
+
+form button {
+  width: 35%;
+  font-size: 1.5rem;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  transition: all 200ms;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  margin: auto;
+  color: #dc2626;
+}
+
+form button:hover {
+  border: 2px solid #dc2626;
+  cursor: pointer;
+}
+
+form button:active {
+  color: #dc2626;
+  border: 2px solid #dc2626;
+}
+
+form label {
+  font-size: 1.5rem;
+}
+
+form [type="text"] {
+  background-color: transparent;
+  display: block;
+  font-size: 1.2rem;
+  height: 10%;
+  width: 125%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin-top: 15px;
+  border-bottom: 1px solid black;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+}
+
+form label:last-of-type {
+  text-align: center;
+  font-size: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+form input:last-of-type {
+  margin: 15px auto 15px auto;
+}
